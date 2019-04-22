@@ -1,0 +1,11 @@
+.vs
+*.pyc
+*~
+__pycache__
+env
+db.sqlite3
+/static
+.DB_Store
+*.pyproj.user
+*.pyproj
+obj
