@@ -10,6 +10,7 @@
 <body>
     <div class="page-header">
         {% if user.is_authenticated %}
+        <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
         <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
         {% else %}
         <a href="{% url 'go_auth' %}" class="top-menu"><span class="glyphicon glyphicon-user"></span></a>
@@ -17,12 +18,8 @@
         <h1><a href="/">50Byte's blog</a></h1>
     </div>
     <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
             {% block content %}
             {% endblock %}
-            </div>
-        </div>
     </div>
 </body>
 </html>
